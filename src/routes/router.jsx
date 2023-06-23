@@ -3,8 +3,10 @@ import {
     
   } from "react-router-dom";
 import Main from "../Layout/Main";
-import App from "../App";
+
 import AddUser from "../Page/AddUser/AddUser";
+import Home from "../Page/Home/Home/Home";
+import EditUser from "../Page/EditUser/EditUser";
 
 const router = createBrowserRouter([
     {
@@ -13,11 +15,15 @@ const router = createBrowserRouter([
       children:[
         {
           path:'/',
-          element:<App></App>
+          element:<Home></Home>
         },
         {
           path:'addUser',
           element:<AddUser></AddUser>
+        },
+        {
+          path:'editUser',
+          element:<EditUser></EditUser>
         },
       ]
     },
