@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import SectionTitle from "../../Component/SectionTitle";
 import Lottie from "lottie-react";
 import animate from "../../assets/user-add.json"
+import { toast } from "react-hot-toast";
 const AddUser = () => {
 
   const {
@@ -11,7 +12,22 @@ const AddUser = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
+    fetch("http://localhost:5000/addUsers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          reset();
+          toast.success("New User Added");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
 
   return (
