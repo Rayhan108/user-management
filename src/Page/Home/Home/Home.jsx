@@ -2,16 +2,19 @@
 import UsersTable from "../../../Component/UsersTable";
 import SectionTitle from "../../../Component/SectionTitle";
 import useUsers from "../../../hooks/useUsers";
+import { FaSpinner } from "react-icons/fa";
 
 
 const Home = () => {
-const [allUsers]=useUsers();
+const [allUsers,loading]=useUsers();
 
     return (
 
         <div>
 <SectionTitle header={'our users'}></SectionTitle>
-
+{loading? <div className="flex items-center justify-center h-32">
+                <FaSpinner className="animate-spin text-gray-500 text-4xl" />
+            </div> :
 <div className="overflow-x-auto">
  <table className="table container mx-auto w-1/2">
     {/* head */}
@@ -32,7 +35,7 @@ const [allUsers]=useUsers();
     </tbody>
   </table>
 </div>
-
+}
 
           
         </div>
