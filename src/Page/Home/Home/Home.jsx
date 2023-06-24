@@ -29,7 +29,7 @@ const [allUsers,loading]=useUsers();
     <tbody className="">
  
       {
-            allUsers.map((user,idx)=><UsersTable key={user._id} user={user} idx={idx}></UsersTable>)
+            allUsers?.map((user,idx)=><UsersTable key={user?._id} user={user} idx={idx}></UsersTable>)
            }
   
     </tbody>

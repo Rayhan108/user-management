@@ -10,10 +10,12 @@ import {
 } from "react-router-dom";
 import router from './routes/router.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <QueryClientProvider client={queryClient}>
+<div className='overflow-hidden'>
+<QueryClientProvider client={queryClient}>
 
-  <Toaster />
-   <RouterProvider router={router} />
+<Toaster />
+ <RouterProvider router={router} />
 
-     </QueryClientProvider>
+   </QueryClientProvider>
+</div>
 )

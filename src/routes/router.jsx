@@ -7,6 +7,7 @@ import Main from "../Layout/Main";
 import AddUser from "../Page/AddUser/AddUser";
 import Home from "../Page/Home/Home/Home";
 import EditUser from "../Page/EditUser/EditUser";
+import UpdateUser from "../Page/EditUser/UpdateUser/UpdateUser";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
         {
           path:'editUser',
           element:<EditUser></EditUser>
+        },
+        {
+          path:'update/:id',
+          element:<UpdateUser></UpdateUser>
+         
         },
       ]
     },

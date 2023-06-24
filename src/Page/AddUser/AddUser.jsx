@@ -33,12 +33,12 @@ const AddUser = () => {
   return (
   <>
 
-    <div className="flex items-center justify-center min-h-screen  mb-5 ">
-         <div className="text-center lg:text-left w-2/4 bg-gray-100">
+    <div className="md:flex  items-center justify-center min-h-screen  mb-5 ">
+         <div className="text-center md:text-left md:w-2/4 bg-gray-100">
             <Lottie animationData={animate} loop={true} height={100} width={100} />
           </div>
       
-      <div className="w-1/2 px-6 py-8 bg-gray-100 rounded-lg shadow-md ">
+      <div className="md:w-1/2 px-6 py-8 bg-gray-100 rounded-lg shadow-md ">
       <SectionTitle header={"Add New User"}></SectionTitle>
         <div className="flex flex-col ml-6">
          

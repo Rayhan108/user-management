@@ -2,7 +2,7 @@ import logo from "../../assets/Community Logo .png"
 const Footer = () => {
     return (
       <>
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer  p-10 bg-base-200 text-base-content">
         <div>
           <img className="w-20 ml-16" src={logo} alt="" />
           <p> <span className="text-3xl font-bold">User Management</span> <br/>Providing reliable tech since 1992</p>
